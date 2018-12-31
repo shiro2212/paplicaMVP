@@ -40,6 +40,7 @@
                 <tapGestureRecognizer id="6RZ-ut-HdW">
                     <connections>
                         <action selector="onTapUserCard:" destination="BYZ-38-t0r" id="c0b-bP-ovb"/>
+                        <segue destination="bpm-Dp-p0y" kind="show" identifier="onTapUserCard" id="kWQ-Tb-YXA"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

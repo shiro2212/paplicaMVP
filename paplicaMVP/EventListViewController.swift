@@ -13,6 +13,7 @@ class EventListViewController: UIViewController {
     @IBOutlet weak var selectedUserCard: UIImageView!
     @IBAction func onTapUserCard(_ sender: UITapGestureRecognizer) {
         print("タップされました！")
+        self.performSegue(withIdentifier: "onTapUserCard", sender: nil)
     }
     
     override func viewDidLoad() {
