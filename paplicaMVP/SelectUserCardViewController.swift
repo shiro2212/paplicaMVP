@@ -18,6 +18,7 @@ class SelectUserCardViewController: UICollectionViewController,UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.userCardCollection.allowsMultipleSelection = true
     }
     
     // cellの数を返す関数
@@ -27,17 +28,17 @@ class SelectUserCardViewController: UICollectionViewController,UICollectionViewD
     
     // cellに情報を入れていく関数
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // "Cell" はストーリーボードで設定したセルのID
         let cell:UICollectionViewCell =
             collectionView.dequeueReusableCell(withReuseIdentifier: "userCardViewCell",
                                                for: indexPath)
-        
-        // Tag番号を使ってImageViewのインスタンス生成
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
-        // 画像配列の番号で指定された要素の名前の画像をUIImageとする
         let cellImage = UIImage(named: photos[indexPath.row])
-        // UIImageをUIImageViewのimageとして設定
         imageView.image = cellImage
+        
+        // TODO 背景青ではなくチェックマークなどにする
+        let selectedBGView = UIView(frame: cell.frame)
+        selectedBGView.backgroundColor = .blue
+        cell.selectedBackgroundView = selectedBGView
         
         return cell
     }
@@ -49,7 +50,7 @@ class SelectUserCardViewController: UICollectionViewController,UICollectionViewD
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         // 横方向のスペース調整
         let horizontalSpace:CGFloat = 2
-        let cellSize:CGFloat = self.view.bounds.width/2 - horizontalSpace
+        let cellSize:CGFloat = self.userCardCollection.bounds.width/2 - horizontalSpace
         // 正方形で返すためにwidth,heightを同じにする
         return CGSize(width: cellSize, height: cellSize)
     }
@@ -57,8 +58,11 @@ class SelectUserCardViewController: UICollectionViewController,UICollectionViewD
     // cell選択時に呼ばれる関数
     // 画面遷移先に渡すデータをここで格納する
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedItems:[IndexPath] = self.userCardCollection.indexPathsForSelectedItems!
+        
+        print("it was tapped! : \(selectedItems)")
         // Identifierが"Segue"のSegueを使って画面遷移する関数
-        performSegue(withIdentifier: "Segue", sender: nil)
+        //performSegue(withIdentifier: "Segue", sender: nil)
     }
     
 //    // 画面遷移先のViewControllerを取得し、データを渡す

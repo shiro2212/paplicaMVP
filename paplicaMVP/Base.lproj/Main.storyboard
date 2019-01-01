@@ -81,6 +81,9 @@
                             <outlet property="delegate" destination="bpm-Dp-p0y" id="JEZ-uy-U9g"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="userCardCollection" destination="jbH-dD-Y1n" id="1t3-Fq-qID"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n18-n7-4mE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="5WB-zk-TlE">
