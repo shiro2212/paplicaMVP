@@ -18,7 +18,8 @@ class SelectUserCardViewController: UICollectionViewController,UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.userCardCollection.allowsMultipleSelection = true
+        // TODO 複数選択時はこれをtrueにする
+        //self.userCardCollection.allowsMultipleSelection = true
     }
     
     // cellの数を返す関数
@@ -36,9 +37,9 @@ class SelectUserCardViewController: UICollectionViewController,UICollectionViewD
         imageView.image = cellImage
         
         // TODO 背景青ではなくチェックマークなどにする
-        let selectedBGView = UIView(frame: cell.frame)
-        selectedBGView.backgroundColor = .blue
-        cell.selectedBackgroundView = selectedBGView
+        // let selectedBGView = UIView(frame: cell.frame)
+        // selectedBGView.backgroundColor = .blue
+        // cell.selectedBackgroundView = selectedBGView
         
         return cell
     }
@@ -61,16 +62,6 @@ class SelectUserCardViewController: UICollectionViewController,UICollectionViewD
         let selectedItems:[IndexPath] = self.userCardCollection.indexPathsForSelectedItems!
         
         print("it was tapped! : \(selectedItems)")
-        // Identifierが"Segue"のSegueを使って画面遷移する関数
-        //performSegue(withIdentifier: "Segue", sender: nil)
+        self.navigationController?.popViewController(animated: true)
     }
-    
-//    // 画面遷移先のViewControllerを取得し、データを渡す
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "Segue" {
-//            let vc = segue.destination as! ViewController
-//            vc.receiveColor = giveColor
-//            vc.receiveColorName = giveColorName
-//        }
-//    }
 }
