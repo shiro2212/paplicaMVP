@@ -54,29 +54,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2jF-Ad-vch">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="0.0" id="2jF-Ad-vch">
                             <size key="itemSize" width="185" height="165"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="card" reuseIdentifier="userCardViewCell" id="zP8-Zm-UXR" customClass="UserCardViewCell" customModule="paplicaMVP" customModuleProvider="target">
-                                <rect key="frame" x="95" y="0.0" width="185" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="userCardViewCell" id="lek-21-LMr">
+                                <rect key="frame" x="0.0" y="0.0" width="185" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="185" height="165"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="7gc-7O-bcn">
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Man56" translatesAutoresizingMaskIntoConstraints="NO" id="HrZ-mP-uBC">
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="165"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </view>
-                                <connections>
-                                    <outlet property="userCard" destination="7gc-7O-bcn" id="esi-Uy-GTz"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -84,11 +81,13 @@
                             <outlet property="delegate" destination="bpm-Dp-p0y" id="JEZ-uy-U9g"/>
                         </connections>
                     </collectionView>
-                    <connections>
-                        <outlet property="collectionView" destination="jbH-dD-Y1n" id="ON2-xg-JGn"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n18-n7-4mE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5WB-zk-TlE">
+                    <connections>
+                        <action selector="onUserCardTap:" destination="bpm-Dp-p0y" id="yfd-kz-Anz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1952.8" y="132.68365817091455"/>
         </scene>
@@ -112,7 +111,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Man56" width="170" height="170"/>
         <image name="SelectedUserCard" width="260" height="163"/>
-        <image name="User" width="170" height="170"/>
     </resources>
 </document>

@@ -10,9 +10,9 @@ import UIKit
 
 class UserCardViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var userCard: UIImageView!
     
-    required init?(coder aDecoder: NSCoder) {
+    
+       required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }
