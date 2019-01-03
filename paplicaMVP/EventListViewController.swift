@@ -10,6 +10,8 @@ import UIKit
 
 class EventListViewController: UIViewController {
 
+    
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var selectedUserCard: UIImageView!
     @IBAction func onTapUserCard(_ sender: UITapGestureRecognizer) {
         self.performSegue(withIdentifier: "onTapUserCard", sender: nil)

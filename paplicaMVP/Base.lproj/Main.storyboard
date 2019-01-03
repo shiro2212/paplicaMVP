@@ -18,21 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Man56" translatesAutoresizingMaskIntoConstraints="NO" id="IWo-2l-nSu">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Man56" translatesAutoresizingMaskIntoConstraints="NO" id="IWo-2l-nSu">
                                 <rect key="frame" x="0.0" y="64" width="185" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="6RZ-ut-HdW" appends="YES" id="Kq9-Mq-yAL"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小林 宏幸" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNB-ue-bhD">
+                                <rect key="frame" x="245" y="136" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="dDr-93-LV3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IWo-2l-nSu" firstAttribute="centerY" secondItem="wNB-ue-bhD" secondAttribute="centerY" id="3Q1-Dh-u0u"/>
+                            <constraint firstItem="IWo-2l-nSu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XuO-xl-7nf"/>
+                            <constraint firstItem="wNB-ue-bhD" firstAttribute="leading" secondItem="IWo-2l-nSu" secondAttribute="trailing" constant="60" id="Zlg-aO-8Vh"/>
+                            <constraint firstItem="IWo-2l-nSu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fGd-8D-OUW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wNB-ue-bhD" secondAttribute="trailing" constant="40" id="u11-Eu-OP0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWo-2l-nSu" secondAttribute="bottom" constant="438" id="wln-TA-Kmt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="XR8-Fm-Ibl"/>
                     <connections>
                         <outlet property="selectedUserCard" destination="IWo-2l-nSu" id="9eJ-ZQ-VhV"/>
+                        <outlet property="userName" destination="wNB-ue-bhD" id="f8s-iL-4nK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
