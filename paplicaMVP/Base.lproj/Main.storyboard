@@ -24,7 +24,6 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="6RZ-ut-HdW" appends="YES" id="Kq9-Mq-yAL"/>
-                                    <outletCollection property="gestureRecognizers" destination="6RZ-ut-HdW" appends="YES" id="0ED-fv-pq7"/>
                                 </connections>
                             </imageView>
                         </subviews>

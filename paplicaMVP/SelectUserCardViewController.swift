@@ -59,9 +59,11 @@ class SelectUserCardViewController: UICollectionViewController,UICollectionViewD
     // cell選択時に呼ばれる関数
     // 画面遷移先に渡すデータをここで格納する
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedItems:[IndexPath] = self.userCardCollection.indexPathsForSelectedItems!
-        
-        print("it was tapped! : \(selectedItems)")
+        // TODO 複数選択時はこれを使う
+        // let selectedItems:[IndexPath] = self.userCardCollection.indexPathsForSelectedItems!
+        let count = (self.navigationController?.viewControllers.count)! - 2
+        let elvc = self.navigationController?.viewControllers[count] as! EventListViewController
+        elvc.selectedUserCard.image = UIImage(named:photos[indexPath.row])
         self.navigationController?.popViewController(animated: true)
     }
 }
