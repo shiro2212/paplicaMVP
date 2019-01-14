@@ -14,6 +14,7 @@
 		651C349421D9B1BE0072EAB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651C349221D9B1BE0072EAB9 /* LaunchScreen.storyboard */; };
 		652F287A21D9B64C0099567D /* SelectUserCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F287921D9B64C0099567D /* SelectUserCardViewController.swift */; };
 		652F287C21D9C0AB0099567D /* UserCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F287B21D9C0AB0099567D /* UserCardViewCell.swift */; };
+		65BD6CB521EC286E00F3C6DE /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BD6CB421EC286E00F3C6DE /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		651C349521D9B1BE0072EAB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652F287921D9B64C0099567D /* SelectUserCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUserCardViewController.swift; sourceTree = "<group>"; };
 		652F287B21D9C0AB0099567D /* UserCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardViewCell.swift; sourceTree = "<group>"; };
+		65BD6CB421EC286E00F3C6DE /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				651C348921D9B1BD0072EAB9 /* AppDelegate.swift */,
 				651C348B21D9B1BD0072EAB9 /* EventListViewController.swift */,
 				651C348D21D9B1BD0072EAB9 /* Main.storyboard */,
+				65BD6CB421EC286E00F3C6DE /* EventDetailViewController.swift */,
 				652F287B21D9C0AB0099567D /* UserCardViewCell.swift */,
 				652F287921D9B64C0099567D /* SelectUserCardViewController.swift */,
 				651C349021D9B1BE0072EAB9 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				652F287A21D9B64C0099567D /* SelectUserCardViewController.swift in Sources */,
+				65BD6CB521EC286E00F3C6DE /* EventDetailViewController.swift in Sources */,
 				652F287C21D9C0AB0099567D /* UserCardViewCell.swift in Sources */,
 				651C348C21D9B1BD0072EAB9 /* EventListViewController.swift in Sources */,
 				651C348A21D9B1BD0072EAB9 /* AppDelegate.swift in Sources */,
